@@ -1,38 +1,150 @@
-.App {
+/* App.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Header */
+.header {
+  background-color: #0c0b0b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed; /* Make the header fixed at the top */
+  width: 100%; /* Make the header cover the entire width */
+  z-index: 1000; /* Ensure the header stays on top of other content */
+}
+
+/* Add some styles for the h1 element */
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: color-change 3s infinite; /* Apply color change animation */
+}
+
+/* Keyframes for color change animation */
+@keyframes color-change {
+  0% {
+    color: #ff0000; /* Start color */
+  }
+  33% {
+    color: #00ff00; /* Middle color */
+  }
+  66% {
+    color: #0000ff; /* End color */
+  }
+  100% {
+    color: #ff0000; /* Back to start color */
+  }
+}
+
+/* Add some hover effect to the header */
+.header:hover {
+  background-color: #444; /* Darken background on hover */
+  cursor: pointer;
+}
+
+.header:hover h1 {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+/* Add some decoration to the header */
+.header::before,
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  z-index: -1; /* Behind the header content */
+}
+
+.header::before {
+  left: 0;
+}
+
+.header::after {
+  right: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0; /* Reduced padding for the navbar */
+  text-align: center;
+  width: 100%; /* Make the navbar cover the entire width */
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0; /* Adjust the top position to the very top */
+  z-index: 1000; /* Ensure the navbar stays above other content */
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar ul li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar ul li .nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px; /* Add padding to the links for better clickability */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar ul li .nav-link:hover {
+  background-color: #555; /* Darken the background on hover */
+  border-radius: 5px; /* Add some rounded corners */
 }
 
-.App-link {
-  color: #61dafb;
+/* Style for the header to ensure it's not overlapped by the navbar */
+.header {
+  padding-top: 80px; /* Add top padding to prevent overlap */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Portfolio */
+.portfolio {
+  padding: 20px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project h2 {
+  margin-bottom: 10px;
+}
+
+.project-links a {
+  display: block;
+  margin-bottom: 5px;
 }
