@@ -1,29 +1,65 @@
 // Navbar.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import './App.css'; // Import navbar styles if any
 
 const Navbar = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <nav className="navbar">
       <ul>
         <li>
-          <Link to="/" className="nav-link" activeClassName="active">
-            About Me
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={scrollToTop}
+          >
+            About
           </Link>
         </li>
         <li>
-          <Link to="/portfolio" className="nav-link" activeClassName="active">
+          <Link
+            activeClass="active"
+            to="portfolio"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={scrollToTop}
+          >
             Portfolio
           </Link>
         </li>
         <li>
-          <Link to="/contact" className="nav-link" activeClassName="active">
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={scrollToTop}
+          >
             Contact
           </Link>
         </li>
         <li>
-          <Link to="/resume" className="nav-link" activeClassName="active">
+          <Link
+            activeClass="active"
+            to="resume"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={scrollToTop}
+          >
             Resume
           </Link>
         </li>

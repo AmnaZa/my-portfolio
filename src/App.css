@@ -19,6 +19,14 @@
   position: fixed; /* Make the header fixed at the top */
   width: 100%; /* Make the header cover the entire width */
   z-index: 1000; /* Ensure the header stays on top of other content */
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: color-change 3s infinite; /* Apply color change animation */
+
 }
 
 /* Add some styles for the h1 element */
@@ -79,11 +87,48 @@
 }
 
 /* Footer */
+
+
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 20px 0;
 }
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 14px; /* Adjust font size as needed */
+  margin-right: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.footer-info {
+  text-align: right;
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
 
 /* Navbar */
 
@@ -132,19 +177,74 @@
 }
 
 /* Portfolio */
+/* Portfolio.css */
+
 .portfolio {
   padding: 20px;
 }
 
 .project {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .project h2 {
   margin-bottom: 10px;
+  color: #333;
+}
+
+.project p {
+  margin-bottom: 20px;
+  color: #555;
 }
 
 .project-links a {
-  display: block;
-  margin-bottom: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-links a:nth-child(1) {
+  background-color: #007bff; /* View Project button color */
+}
+
+.project-links a:nth-child(2) {
+  background-color: #28a745; /* GitHub button color */
+}
+
+.project-links a:hover {
+  background-color: #555;
+}
+
+
+
+.slider {
+  margin: 5px 20px 20px; /* Top padding equal to the height of the header */
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.slider img {
+  width: 100%;
+  border-radius:10px;
+}
+
+.react-multi-carousel-list {
+  padding-top: 80px; /* Adjusted to match the header height */
+}
+
+/* Custom dot style */
+.custom-dot-list-style button {
+  border: none;
+  background: rgb(255, 68, 68);
+}
+
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: rgb(255, 68, 68) !important;
 }

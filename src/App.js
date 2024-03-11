@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Navbar from './NavBar';
 import Portfolio from './Portfolio';
+import Slider from './Slider';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="app">
         <Header />
         <Navbar />
+        <Slider/>
         <div className="content">
           <Routes>
             <Route path="/" element={<Portfolio />} />
